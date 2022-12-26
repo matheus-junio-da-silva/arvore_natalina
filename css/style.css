@@ -1,0 +1,118 @@
+html, body {
+    height: 100%;
+}
+.tree {
+    width: 200px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+
+  }
+  
+  .trunk {
+    width: 50px;
+    height: 200px;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    background: linear-gradient(#663300, #4d2600);
+  }
+  
+  .star {
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: yellow;
+    position: absolute;
+    top: -195px;
+    left: 7px;
+    animation: shine 2s infinite;
+    
+  }
+  
+  @keyframes shine {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .leave:nth-child(1) {
+    width: 0;
+    height: 0;
+    border-bottom: 65px solid #00cc00;
+    border-right: 65px solid transparent;
+    border-left: 65px solid transparent;
+    position: absolute;
+    top: -160px;
+    left: -33px;
+    
+  }
+
+  .leave:nth-child(2) {
+    width: 150px;
+    height: 50px;
+    background: #00cc00;
+    position: absolute;
+    top: -100px;
+    left: -45px;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .leave:nth-child(3) {
+    width: 175px;
+    height: 50px;
+    background: #00cc00;
+    position: absolute;
+    top: -50px;
+    left: -57px;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .leaves {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(#00cc00, #009900);
+    border-radius: 15px 15px 25px 25px;
+    position: absolute;
+    top: 0;
+    left: -70px;
+  }
+  
+  .light {
+    width: 10px;
+    height: 10px;
+    background: rgb(207, 65, 65);
+    border-radius: 50%;
+    position: absolute;
+    animation: shine 1s ease-in-out infinite;
+  }
+  
+  /* position the lights on the tree */
+  .light:nth-child(1) {
+    top: 10px;
+    left: 10px;
+  }
+  .light:nth-child(2) {
+    top: 10px;
+    right: 10px;
+  }
+  /* more light positions */
+  @keyframes shine {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
